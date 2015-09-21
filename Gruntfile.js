@@ -36,5 +36,6 @@ module.exports = function (grunt) {
     }
   });
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.registerTask('decrypt', ['cipher:decrypt']);
   grunt.registerTask('default', ['jshint','cipher:encrypt']);
 };
